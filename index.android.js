@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, ListView , StyleSheet} from 'react-native';
-import { Container, Header,Left,Content, Button, Text,Icon , Body, Title, Right , Footer, FooterTab} from 'native-base';
+import { Container, Header,Left,Content, Button, Text,Icon , Body, Title, Right , Footer, FooterTab, Badge} from 'native-base';
 import Row from './Component/row';
 import Normativas from './Mock/normativas.json';
 
@@ -24,7 +24,7 @@ class awesome extends Component {
                 <Header>
                     <Left>
                         <Button transparent>
-                            <Icon name='menu' />
+                            <Icon name='arrow-back' />
                         </Button>
                     </Left>
                     <Body>
@@ -43,13 +43,25 @@ class awesome extends Component {
                     renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
                   />
                 </Content>
-                <Footer>
-                    <FooterTab>
-                        <Button full>
-                            <Text>Footer</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
+
+             <Footer >
+                      <FooterTab>
+                          <Button badge vertical>
+                              <Badge><Text>2</Text></Badge>
+                              <Icon name="apps" />
+                              <Text>Opções</Text>
+                          </Button>
+                          <Button active badge vertical>
+                              <Badge ><Text>51</Text></Badge>
+                              <Icon active name="navigate" />
+                              <Text>Não lidas</Text>
+                          </Button>
+                          <Button>
+                              <Icon name="person" />
+                              <Text>Contatos</Text>
+                          </Button>
+                      </FooterTab>
+                  </Footer>
             </Container>
       );
     }
@@ -60,7 +72,7 @@ const styles = StyleSheet.create({
     separator: {
     flex: 1,
     height: StyleSheet.hairlineWidth,
-    backgroundColor: '#3c3b3b',
+    backgroundColor: '#ddd',
   },
 });
 

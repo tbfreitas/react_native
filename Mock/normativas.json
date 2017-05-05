@@ -1,39 +1,38 @@
 [
   {
     "name" : "Norma institucional 1",
-    "descr" : "Essa é a primeira norma institucional, vinculada ao pessoal do banco"
+    "descr" : "Essa é a primeira norma institucional, vinculada ao pessoal do banco",
+    "image" : "myicon"
   },
   {
     "name" : "Norma institucional 2",
-    "descr" : "Essa é a segunda norma institucional, relacionada ao meio cientifico"
+    "descr" : "Essa é a segunda norma institucional, relacionada ao meio cientifico",
+     "image" : "chinese"
   },
   {
      "name" : "Norma institucional 3",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+       "image" : "computer"
   },
    {
      "name" : "Norma institucional 3",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+       "image" : "paper"
   },
   {
      "name" : "Norma institucional 4",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+        "image" : "rigth"
   },
   {
      "name" : "Norma institucional 5",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+       "image" : "rule"
   },
   {
      "name" : "Norma institucional 6",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
-  },
-  {
-     "name" : "Norma institucional 7",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
-  },
-   {
-     "name" : "Norma institucional 8",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol"
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+       "image" : "scummvm1"
   }
 
 ]
