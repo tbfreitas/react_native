@@ -27,13 +27,13 @@ class Home extends Component {
   }    
 
  render() {
-     const { navigate } = this.props.navigation;
-     
+     const { navigate }  = this.props.navigation;    
+
      return (
         <Container >
                 <Header>
                     <Left>
-                        <Button transparent  onPress={() => navigate('Pagina')}>
+                        <Button transparent >
                             <Icon name='arrow-back' />
                         </Button>
                     </Left>
@@ -47,7 +47,7 @@ class Home extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={(data) =>                        
-                      <Row data={data}>                      
+                   <Row data={{ x : this.props , data}}>                      
                       </Row>
                     }
                     renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
 
 const awesome = StackNavigator({
   Home: { screen: Home },
-  Row : { screen : Row},
   Pagina : {screen : Pagina}
 });
 

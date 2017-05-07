@@ -9,23 +9,24 @@ export default class AppContainer extends Component {
     constructor(props){
         super(props);
         
-        
     }
 
-    render(pros){
+    render(){
+        
+        const { navigate }  = this.props.data.x.navigation; 
 
         return( 
             
-            <TouchableOpacity  style={styles.row} 
+            <TouchableOpacity  style={styles.row} onPress={() => navigate('Pagina')}
                   title="Chat with Lucy">
 
                 <View style={styles.image}>
-                      <Image   source={{uri : this.props.data.image }} style={{width: 64, height: 64}}/>
+                      <Image   source={{uri : this.props.data.data.image }} style={{width: 64, height: 64}}/>
                 </View>
               
                 <View style={styles.carac}>
-                    <Text style={styles.name}>{this.props.data.name}</Text>
-                    <Text style={styles.descr}>{this.props.data.descr} </Text>                      
+                    <Text style={styles.name}>{this.props.data.data.name}</Text>
+                    <Text style={styles.descr}>{this.props.data.data.descr} </Text>                      
                 </View>       
             </TouchableOpacity>
 
