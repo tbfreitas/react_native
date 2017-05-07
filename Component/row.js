@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
-import { AppRegistry, View ,StyleSheet, Text, Image} from 'react-native';
+import { AppRegistry, View ,StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import { Container, Header, Title, Button, Left, Right, Body, Icon } from 'native-base';
+import Pagina from '../Pages/paginanorma';  
 
 
-export default class AppContainer extends React.Component {
+export default class AppContainer extends Component {
 
     constructor(props){
-        super(props);      
+        super(props);
+        
+        
     }
 
-    render(props){
+    render(pros){
 
-        var x = this.props.data.image;
-        console.log(x)
-        return (
-           
-            <View style={styles.row}>
+        return( 
+            
+            <TouchableOpacity  style={styles.row} 
+                  title="Chat with Lucy">
 
                 <View style={styles.image}>
-                      <Image source={{uri : this.props.data.image }} style={{width: 64, height: 64}}/>
+                      <Image   source={{uri : this.props.data.image }} style={{width: 64, height: 64}}/>
                 </View>
               
                 <View style={styles.carac}>
                     <Text style={styles.name}>{this.props.data.name}</Text>
                     <Text style={styles.descr}>{this.props.data.descr} </Text>                      
                 </View>       
-            </View>
+            </TouchableOpacity>
 
         );
     }
@@ -64,4 +66,5 @@ const styles = StyleSheet.create({
   
     
 });
+
 

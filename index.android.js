@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, ListView , StyleSheet} from 'react-native';
 import { Container, Header,Left,Content, Button, Text,Icon , Body, Title, Right , Footer, FooterTab, Badge} from 'native-base';
+import { StackNavigator } from 'react-navigation';
 import Row from './Component/row';
 import Normativas from './Mock/normativas.json';
+import Pagina from './Pages/paginanorma';  
 
-class awesome extends Component {
+
+
+class Home extends Component {
+
+    static navigationOptions = {
+        header : null
+    };
 
   constructor(props){
 
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     var customData = require('./Mock/normativas.json');
-
+    
 
     this.state = {
       dataSource: ds.cloneWithRows(customData)
@@ -19,11 +27,13 @@ class awesome extends Component {
   }    
 
  render() {
+     const { navigate } = this.props.navigation;
+     
      return (
         <Container >
                 <Header>
                     <Left>
-                        <Button transparent>
+                        <Button transparent  onPress={() => navigate('Pagina')}>
                             <Icon name='arrow-back' />
                         </Button>
                     </Left>
@@ -37,7 +47,7 @@ class awesome extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={(data) =>                        
-                      <Row data={data}>                        
+                      <Row data={data}>                      
                       </Row>
                     }
                     renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
@@ -76,6 +86,11 @@ const styles = StyleSheet.create({
   },
 });
 
+const awesome = StackNavigator({
+  Home: { screen: Home },
+  Row : { screen : Row},
+  Pagina : {screen : Pagina}
+});
 
 
 AppRegistry.registerComponent('awesome', () => awesome);
