@@ -11,28 +11,33 @@
   },
   {
      "name" : "Norma institucional 3",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+  "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
        "image" : "computer"
   },
    {
-     "name" : "Norma institucional 3",
-    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
-       "image" : "paper"
-  },
-  {
      "name" : "Norma institucional 4",
     "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
-        "image" : "rigth"
+      "image" : "paper"
   },
   {
      "name" : "Norma institucional 5",
     "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
-       "image" : "rule"
+      "image" : "rigth"
   },
   {
      "name" : "Norma institucional 6",
     "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
-       "image" : "scummvm1"
+      "image" : "rule"
+  },
+  {
+     "name" : "Norma institucional 7",
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+      "image" : "scummvm1"
+  },
+  {
+     "name" : "Norma institucional 8",
+    "descr" : "Essa é a terceira norma institucional, relacionada ao time de futebol",
+      "image" : "scummvm1"
   }
 
 ]

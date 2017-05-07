@@ -7,34 +7,35 @@ import Normativas from './Mock/normativas.json';
 import Pagina from './Pages/paginanorma';  
 
 
-
 class Home extends Component {
 
+    // Taking off default header of navigation
     static navigationOptions = {
         header : null
     };
 
-  constructor(props){
+    constructor(props){
 
-    super(props);
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    var customData = require('./Mock/normativas.json');
-    
-
-    this.state = {
-      dataSource: ds.cloneWithRows(customData)
-    };
-  }    
+        super(props);
+        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        
+        // Getting mock
+        var customData = require('./Mock/normativas.json');
+        this.state = {
+            dataSource: ds.cloneWithRows(customData)
+        };
+    }    
 
  render() {
      const { navigate }  = this.props.navigation;    
 
      return (
         <Container >
+
                 <Header>
                     <Left>
                         <Button transparent >
-                            <Icon name='arrow-back' />
+                            <Icon name='menu' />
                         </Button>
                     </Left>
                     <Body>
@@ -42,42 +43,42 @@ class Home extends Component {
                     </Body>
                     <Right />
                 </Header>
-                <Content>
-                                      
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={(data) =>                        
-                   <Row data={{ x : this.props , data}}>                      
-                      </Row>
-                    }
-                    renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
-                  />
+
+                <Content>              
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={(data) =>                        
+                    <Row data={{ x : this.props , data}}>                      
+                        </Row>
+                        }
+                        renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
+                    />
                 </Content>
 
-             <Footer >
-                      <FooterTab>
-                          <Button badge vertical>
-                              <Badge><Text>2</Text></Badge>
-                              <Icon name="apps" />
-                              <Text>Opções</Text>
-                          </Button>
-                          <Button active badge vertical>
-                              <Badge ><Text>51</Text></Badge>
-                              <Icon active name="navigate" />
-                              <Text>Não lidas</Text>
-                          </Button>
-                          <Button>
-                              <Icon name="person" />
-                              <Text>Contatos</Text>
-                          </Button>
-                      </FooterTab>
-                  </Footer>
+                <Footer>
+                    <FooterTab>
+                        <Button badge vertical>
+                            <Badge><Text>2</Text></Badge>
+                            <Icon name="apps" />
+                            <Text>Opções</Text>
+                        </Button>
+                        <Button active badge vertical>
+                            <Badge ><Text>51</Text></Badge>
+                            <Icon active name="navigate" />
+                            <Text>Não lidas</Text>
+                        </Button>
+                        <Button>
+                            <Icon name="person" />
+                            <Text>Contatos</Text>
+                        </Button>
+                    </FooterTab>
+                </Footer>
             </Container>
       );
     }
   }
   
-
+// Settings from separator
 const styles = StyleSheet.create({
     separator: {
     flex: 1,
@@ -86,6 +87,8 @@ const styles = StyleSheet.create({
   },
 });
 
+
+// Settings about routering
 const awesome = StackNavigator({
   Home: { screen: Home },
   Pagina : {screen : Pagina}

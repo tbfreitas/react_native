@@ -17,7 +17,7 @@ export default class AppContainer extends Component {
 
         return( 
             
-            <TouchableOpacity  style={styles.row} onPress={() => navigate('Pagina')}
+            <TouchableOpacity  style={styles.row} onPress={() => navigate('Pagina' , {name : this.props.data.data.name })}
                   title="Chat with Lucy">
 
                 <View style={styles.image}>
