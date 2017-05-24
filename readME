@@ -1,0 +1,1 @@
+dont change native-base version in package json, cause it's an error on new version ( ALGUMA COISA UNDEFINED)
